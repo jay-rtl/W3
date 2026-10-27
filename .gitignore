@@ -1,0 +1,5 @@
+dist/
+node_modules/
+.local/
+w3-desktop-final.jpg
+w3-mobile-final.jpg
