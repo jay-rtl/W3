@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="w" x1="5" y1="22" x2="110" y2="69" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D62E8"/>
+      <stop offset=".22" stop-color="#52BFFF"/>
+      <stop offset=".46" stop-color="#F2FAFF"/>
+      <stop offset=".68" stop-color="#78BDFF"/>
+      <stop offset="1" stop-color="#0755D3"/>
+    </linearGradient>
+    <linearGradient id="three" x1="111" y1="10" x2="161" y2="78" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF17C"/>
+      <stop offset=".46" stop-color="#FFD331"/>
+      <stop offset="1" stop-color="#F1852D"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="13" fill="#061426"/>
+  <g transform="translate(3 17) scale(.34)">
+    <path d="M4 9h19l14 41 14-34h16l14 34L95 9h19L91 79H73L59 43 44 79H26L4 9Z" fill="url(#w)"/>
+    <path d="M4 9h19l14 41-10 29L4 9Z" fill="#0748BA" opacity=".42"/>
+    <path d="M51 16h16L59 43 44 79H31l20-63Z" fill="#F7FCFF" opacity=".22"/>
+    <path d="M95 9h19L91 79H77L95 9Z" fill="#073FAF" opacity=".23"/>
+    <path d="M116 18h20c12 0 18 6 18 14 0 9-7 14-18 14h-16m16 0c13 0 20 6 20 15 0 10-7 15-20 15h-20" stroke="url(#three)" stroke-width="16" stroke-linecap="square" stroke-linejoin="round"/>
+  </g>
+</svg>
