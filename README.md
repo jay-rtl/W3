@@ -1,6 +1,6 @@
 # W3 Creative Technology Studio
 
-Static, dependency-free website. The four portfolio previews are desktop captures of the live sites named in the brief. The hero uses those captures in code-built mockups.
+Static, dependency-free multi-page website. Home, About, Services, Our Work, Process, and Contact each have a direct URL. The four portfolio previews are desktop captures of the live sites named in the brief. The hero uses those captures in code-built mockups.
 
 ## Run
 

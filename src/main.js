@@ -28,16 +28,8 @@ document.addEventListener("click", event => {
 });
 window.addEventListener("resize", () => { if (window.innerWidth > 900) closeMenu(); });
 
-const sections = [...document.querySelectorAll("main > section[id]")];
-const sectionObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    navLinks.forEach(link => link.classList.toggle("active", link.hash === `#${entry.target.id}`));
-  });
-}, { rootMargin: "-35% 0px -55% 0px" });
-sections.forEach(section => sectionObserver.observe(section));
-
 function setupMotion() {
+  if (!gsap || !ScrollTrigger) return;
   ScrollTrigger.getAll().forEach(trigger => trigger.kill());
   gsap.killTweensOf(".title-line, .hero-description, .hero-actions, .mockup, .reveal");
   if (reducedMotion.matches) {
@@ -55,13 +47,13 @@ function setupMotion() {
       scrollTrigger: { trigger: element, start: "top 91%", end: "top 65%", scrub: .85 }
     });
   });
-  gsap.to(".hero-monogram", {
+  if (document.querySelector(".hero-monogram")) gsap.to(".hero-monogram", {
     y: 28, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: 1.2 }
   });
 }
 setupMotion();
 reducedMotion.addEventListener("change", setupMotion);
-window.addEventListener("load", () => ScrollTrigger.refresh(), { once: true });
+window.addEventListener("load", () => ScrollTrigger?.refresh(), { once: true });
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
@@ -70,7 +62,7 @@ const status = document.querySelector("#form-status");
 const prepared = document.querySelector("#prepared");
 const preparedText = document.querySelector("#prepared-text");
 const copyStatus = document.querySelector("#copy-status");
-const fields = [...form.querySelectorAll("input, select, textarea:not([readonly])")];
+const fields = form ? [...form.querySelectorAll("input, select, textarea:not([readonly])")] : [];
 const labels = { "full-name": "Full Name", email: "Email Address", business: "Business Name", service: "Service Needed", details: "Project Details" };
 
 function fieldMessage(field) {
@@ -91,7 +83,7 @@ function showFieldError(field) {
 fields.forEach(field => field.addEventListener("input", () => {
   if (field.hasAttribute("aria-invalid")) showFieldError(field);
 }));
-form.addEventListener("submit", event => {
+form?.addEventListener("submit", event => {
   event.preventDefault();
   const invalid = fields.filter(showFieldError);
   if (invalid.length) {
@@ -119,7 +111,7 @@ form.addEventListener("submit", event => {
   copyStatus.textContent = "";
   preparedText.focus();
 });
-document.querySelector("#copy-brief").addEventListener("click", async () => {
+document.querySelector("#copy-brief")?.addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(preparedText.value);
     copyStatus.textContent = "Brief copied. No message was sent.";

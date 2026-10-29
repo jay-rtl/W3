@@ -10,9 +10,9 @@ const mime = { ".html":"text/html; charset=utf-8", ".css":"text/css; charset=utf
 createServer(async (req, res) => {
   try {
     const pathname = decodeURIComponent(new URL(req.url, "http://localhost").pathname);
-    const relative = pathname === "/" ? "index.html" : pathname.slice(1);
+    const relative = pathname === "/" ? "index.html" : pathname.endsWith("/") ? `${pathname.slice(1)}index.html` : pathname.slice(1);
     const publicPath = resolve(root, "public", relative);
-    const ownPath = resolve(root, relative);
+    const ownPath = resolve(root, root === projectRoot && relative !== "index.html" && relative.endsWith("index.html") ? join("pages", relative) : relative);
     let path = ownPath;
     if (root === projectRoot && !relative.startsWith("src/")) {
       try { if ((await stat(publicPath)).isFile()) path = publicPath; } catch {}

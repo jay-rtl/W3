@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#061426">
+  <meta name="description" content="Prepare a project inquiry for W3. The form creates a copyable brief and does not send or store personal details.">
+  <meta property="og:type" content="website"><meta property="og:title" content="Contact W3 — Start a Project">
+  <meta property="og:description" content="Prepare a project inquiry for W3. The form creates a copyable brief and does not send or store personal details.">
+  <meta property="og:image" content="/og-preview.svg"><meta name="twitter:card" content="summary_large_image">
+  <title>Contact W3 — Start a Project</title>
+  <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header"><div class="shell header-inner">
+    <a class="logo" href="/" aria-label="W3 home"><img src="/w3-mark.svg" alt="" width="76" height="43"></a>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="nav" id="primary-nav" aria-label="Primary navigation"><a href="/">Home</a><a href="/about/">About</a><a href="/services/">Services</a><a href="/work/">Our Work</a><a href="/process/">Process</a><a class="active" aria-current="page" href="/contact/">Contact</a></nav>
+    <a class="button button-blue header-cta" href="/contact/">Let's Talk <span aria-hidden="true">→</span></a>
+  </div></header>
+<main id="main">
+<section class="page-banner section-dark"><div class="shell"><p class="eyebrow">Start a Conversation</p><h1>Let’s talk about your idea.</h1><p>Share the essentials and shape your next digital experience.</p></div></section>
+    <section class="contact section-dark" id="contact" aria-labelledby="contact-title"><div class="shell contact-layout"><div class="contact-intro reveal"><p class="eyebrow">Start a Conversation</p><h2 id="contact-title">Let's build what comes <span>next.</span></h2><p>Tell us a little about your idea. This form prepares a project brief for you to copy; it does not send or store your details. A delivery address or submission service is needed before this site can receive inquiries.</p><div class="contact-line"></div><p class="contact-note">Have a website, brand or story in mind? Start with the essentials and we can shape the rest together.</p></div>
+      <noscript><p class="form-status error">Enable JavaScript to prepare a copyable brief. This page does not send inquiries.</p></noscript><form id="inquiry-form" class="inquiry-form reveal" method="post" novalidate><div class="form-row"><div class="field"><label for="full-name">Full Name <span>*</span></label><input id="full-name" name="fullName" autocomplete="name" required minlength="2"><small class="field-error" id="full-name-error"></small></div><div class="field"><label for="email">Email Address <span>*</span></label><input id="email" name="email" type="email" autocomplete="email" required><small class="field-error" id="email-error"></small></div></div>
+        <div class="form-row"><div class="field"><label for="business">Business Name</label><input id="business" name="business" autocomplete="organization"><small class="field-error" id="business-error"></small></div><div class="field"><label for="service">Service Needed <span>*</span></label><select id="service" name="service" required><option value="">Choose a service</option><option>Web Development</option><option>Creative Design</option><option>Animation &amp; Motion Graphics</option><option>Not sure yet</option></select><small class="field-error" id="service-error"></small></div></div>
+        <div class="field"><label for="details">Project Details <span>*</span></label><textarea id="details" name="details" rows="5" required minlength="20" placeholder="What would you like to create? What should it help your business do?"></textarea><small class="field-error" id="details-error"></small></div>
+        <p id="form-status" class="form-status" role="status" aria-live="polite">Fields marked * are required. No information is sent from this page.</p><button class="button button-blue form-button" type="submit">Prepare Inquiry <span aria-hidden="true">→</span></button>
+        <div class="prepared" id="prepared" hidden><label for="prepared-text">Your project brief — copy and share it through your preferred contact channel</label><textarea id="prepared-text" rows="10" readonly></textarea><button type="button" class="button button-outline" id="copy-brief">Copy Brief</button><p id="copy-status" role="status" aria-live="polite"></p></div>
+      </form></div></section>
+</main>
+  <footer class="footer"><div class="shell footer-top"><div class="footer-brand"><a class="logo" href="/" aria-label="W3 home"><img src="/w3-mark.svg" alt="" width="76" height="43"></a><p>Ideas to experiences.<br>Websites, design and animation.</p></div><div><h2>Explore</h2><a href="/">Home</a><a href="/about/">About</a><a href="/services/">Services</a><a href="/work/">Our Work</a><a href="/process/">Process</a></div><div><h2>Services</h2><a href="/services/">Web Development</a><a href="/services/">Creative Design</a><a href="/services/">Animation &amp; Motion Graphics</a></div><div class="footer-cta"><h2>Have an idea?</h2><p>Let's make something worth experiencing.</p><a class="button button-blue" href="/contact/">Start a Project <span aria-hidden="true">→</span></a></div></div><div class="shell footer-bottom"><span>© <span id="year">2026</span> W3. All rights reserved.</span><a href="/contact/">Project inquiry</a><a href="/work/">Portfolio</a><a href="#main">Back to top ↑</a></div></footer>
+  <script defer src="/vendor/gsap.min.js"></script>
+  <script defer src="/vendor/ScrollTrigger.min.js"></script>
+  <script defer src="/src/main.js"></script>
+</body>
+</html>

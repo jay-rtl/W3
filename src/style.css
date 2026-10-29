@@ -30,3 +30,19 @@
 .logo{flex:none;padding-right:0}
 .logo img{display:block;width:76px;height:auto}
 @media(max-width:900px){.logo img{width:68px}}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.gold-text{color:#9b7200}
+.process-list li>span{color:#005eae}
+.page-banner{padding:clamp(58px,8vw,112px) 0 clamp(62px,8vw,104px);background:radial-gradient(ellipse at 85% 10%,#102e59 0%,#07172c 42%,#061426 78%);border-bottom:1px solid #1c3654}
+.page-banner .eyebrow{color:#83baff;margin-bottom:22px}
+.page-banner h1{max-width:960px;font-size:clamp(3.2rem,7vw,7rem);line-height:.96;letter-spacing:-.075em;margin:0 0 23px}
+.page-banner p:last-child{max-width:650px;color:#c0d0e3;line-height:1.7;font-size:clamp(.95rem,1.4vw,1.13rem);margin:0}
+.page-banner+.about,.page-banner+.process,.page-banner+.contact{border-top:0}
+.page-banner+.services,.page-banner+.work,.page-banner+.why{padding-block:clamp(62px,7vw,96px)}
+.page-banner+.services .service-card{min-height:150px}
+.page-banner+.work .project-grid{grid-template-columns:repeat(2,1fr);gap:42px 26px}
+.page-banner+.work .project-image{aspect-ratio:1.8}
+.page-banner+.work .project h3{font-size:1.2rem}
+.page-banner+.work .project p{display:block;font-size:.84rem;max-width:46ch}
+@media(max-width:680px){.page-banner+.work .project-grid{grid-template-columns:1fr;gap:32px}.page-banner+.work .project-image{aspect-ratio:1.6}.page-banner+.services .service-card{min-height:105px}}
